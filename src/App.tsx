@@ -292,13 +292,9 @@ function App() {
         });
   }
   
-  
-  
   function getPokemonIcon(pokemonNumber: number, id: number) {
     const updatedImgs = [...imgsData];
     let random =  Math.floor(Math.random() * 8);
-    console.log("Mathhhh");
-    console.log(random);
     let pokemonUrl;
     if(random != 7) pokemonUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/" + pokemonNumber + ".png"
     else pokemonUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/" + pokemonNumber + ".png"
@@ -306,6 +302,7 @@ function App() {
     setImgsData(updatedImgs);
   }
   const usedPokemons = useRef(new Set<string>());
+  
   function usePokemonInMap(pokemon: string) {
     
     console.log(usedPokemons);
@@ -367,7 +364,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div id='form'>
         <form onSubmit={e => e.preventDefault()}>
           <label htmlFor="inputPoke">Pokemon para localizar/ver cartas:</label>
           <input type="text" name='inputPoke' id='inputPoke' />
