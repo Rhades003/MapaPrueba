@@ -1,9 +1,4 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+
 
 .logo {
   height: 6em;
@@ -36,7 +31,23 @@
 .card {
   padding: 2em;
 }
-
+.cardDiv {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+#gridCards {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+#container {
+  display: grid;
+  grid-template-columns: auto auto ;
+  
+}
+#container > div {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
 .read-the-docs {
   color: #888;
 }
